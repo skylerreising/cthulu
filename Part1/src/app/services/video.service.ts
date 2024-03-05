@@ -10,7 +10,7 @@ export class VideoService {
   private videos$: Observable<Video[]>;
 
   constructor() {
-    this.videos$ = of(generateMockVideos(50)).pipe(delay(1000));
+    this.videos$ = of(generateMockVideos(50)).pipe(delay(1000*1));
   }
 
   public getVideos(): Observable<Video[]> {

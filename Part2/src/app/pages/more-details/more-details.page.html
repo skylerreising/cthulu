@@ -1,13 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> More Details </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="closeModal()" fill="solid">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Does this work? </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">More Details</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>cat person</h1>
+  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo aliquid debitis ea nostrum? Maiores distinctio recusandae accusantium! Numquam nobis incidunt laudantium id a quae totam repudiandae voluptate veniam consequatur?</span>
+  <ion-button>Watch Movie</ion-button> <ion-button shape="round">Trailer</ion-button>
+  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit sed officiis numquam.</span>
+  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+  <section>
+    <ion-icon name="play-outline" size="large"></ion-icon>
+    <ion-icon name="pause-circle-outline" size="large"></ion-icon>
+  </section>
 </ion-content>

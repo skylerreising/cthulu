@@ -15,6 +15,10 @@ import {
   IonCardSubtitle,
   IonCardContent,
   IonSkeletonText,
+  IonListHeader,
+  IonThumbnail,
+  IonIcon,
+  IonButton
 } from '@ionic/angular/standalone';
 import { Observable } from 'rxjs';
 import { Video } from '../../data-contracts/video';
@@ -43,6 +47,10 @@ import { CommonModule } from '@angular/common';
     IonTitle,
     IonContent,
     IonSkeletonText,
+    IonListHeader,
+    IonThumbnail,
+    IonIcon,
+    IonButton
   ],
 })
 export class ViewMorePage {

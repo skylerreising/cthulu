@@ -14,12 +14,53 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="d-flex flex-wrap justify-content-around">
-    @if(videos$ | async; as videos) { @for(video of videos; track $index) {
+  <div class="d-flex justify-content-between flex-column">
+    @if(videos$ | async; as videos) {
+    @for(video of videos; track $index) {
     <!-- TODO Make me a pretty card -->
+    <ion-card>
+      <img alt="Silhouette of mountains" src="{{ video.thumbnailFeatured }}" />
+      <ion-card-header>
+        <ion-card-title>{{ video.title }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ video.description }}
+      </ion-card-content>
+    </ion-card>
     <!-- https://ionicframework.com/docs/api/card -->
     } } @else {
+    @for(_ of [1,2,3]; track $index) {
     <!-- TODO Make me pretty skeleton text -->
+    <ion-list id="skeletonLoad">
+      <ion-list-header>
+        <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+      </ion-list-header>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+      <!-- <div class="skeletonLoad">
+        <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" class="skelTextCard"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" class="skelTextCard"></ion-skeleton-text>
+        <ion-skeleton-text [animated]="true" class="skelTextCard"></ion-skeleton-text>
+      </div> -->
+    }
     <!-- https://ionicframework.com/docs/api/skeleton-text -->
     }
   </div>

@@ -1,0 +1,15 @@
+ion-content {
+    --background: gray no-repeat center/contain url('/assets/images/cat-person.png');
+    background: var(--background);
+    display: flex;
+    align-items: flex-end;
+    // background-color: black;
+    // color: white;
+  }
+
+ion-content ion-title,
+ion-content h2,
+ion-content p,
+ion-content span {
+  color: white;
+}

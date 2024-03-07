@@ -11,7 +11,7 @@ import {
 } from '@ionic/angular/standalone';
 import { Video } from '../../data-contracts/video';
 import { addIcons } from 'ionicons';
-import { closeOutline, pauseCircleOutline, playOutline } from 'ionicons/icons';
+import { closeOutline, pauseCircleOutline, playOutline, addCircleOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-more-details',
@@ -29,7 +29,8 @@ export class MoreDetailsPage {
     addIcons({
       closeOutline,
       playOutline,
-      pauseCircleOutline
+      pauseCircleOutline,
+      addCircleOutline
     })
   }
 

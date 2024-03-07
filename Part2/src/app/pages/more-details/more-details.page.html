@@ -5,18 +5,39 @@
         <ion-icon slot="icon-only" name="close-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title> Does this work? </ion-title>
+    <ion-title>Media Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-title role="heading" aria-level="1" size="large">cat person</ion-title>
-  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo aliquid debitis ea nostrum? Maiores distinctio recusandae accusantium! Numquam nobis incidunt laudantium id a quae totam repudiandae voluptate veniam consequatur?</span>
-  <ion-button>Watch Movie</ion-button> <ion-button shape="round">Trailer</ion-button>
-  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit sed officiis numquam.</span>
-  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-  <section>
-    <ion-icon name="play-outline" size="large"></ion-icon>
-    <ion-icon name="pause-circle-outline" size="large"></ion-icon>
-  </section>
+  <div class="centered-content">
+    <ion-title role="heading" aria-level="1" size="large" class="firstItem">cat person</ion-title>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo aliquid debitis ea nostrum? Maiores distinctio recusandae accusantium!
+    </span>
+    <section class="horizontalButtons">
+      <ion-button id="watchMovie">Watch Movie</ion-button>
+      <ion-button id="trailer">Trailer</ion-button>
+    </section>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit sed officiis numquam.</span>
+    <span id="movieData">2023 * 1 hr 58 min * Drama, Thriller * Movie 5.1</span>
+    <section id="bottomBar">
+      <div class="bottomIconBar">
+        <ion-icon name="add-circle-outline" size="large"></ion-icon>
+        <span>My Stuff</span>
+      </div>
+      <div class="bottomIconBar">
+        <ion-icon name="close-outline" size="large"></ion-icon>
+        <span>Cross it</span>
+      </div>
+      <div class="bottomIconBar">
+        <ion-icon name="play-outline" size="large"></ion-icon>
+        <span>Play</span>
+      </div>
+      <div class="bottomIconBar">
+        <ion-icon name="pause-circle-outline" size="large"></ion-icon>
+        <span>Pause</span>
+      </div>
+    </section>
+  </div>
+
 </ion-content>

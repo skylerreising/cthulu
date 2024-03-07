@@ -1,8 +1,9 @@
 ion-content {
-    --background: gray no-repeat center/contain url('/assets/images/cat-person.png');
+    --background:
+    linear-gradient(to top, rgba(128, 128, 128, 1) 0%,
+     rgba(0, 0, 0, 0.1) 40%),
+     black no-repeat 50% 20%/contain url('/assets/images/cat-person.png');
     background: var(--background);
-    display: flex;
-    align-items: flex-end;
     // background-color: black;
     // color: white;
   }
@@ -11,5 +12,57 @@ ion-content ion-title,
 ion-content h2,
 ion-content p,
 ion-content span {
+  color: white;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.firstItem {
+  margin-top: 420px;
+}
+
+ion-content span{
+  padding: 10px 12px;
+  font-size: .65rem;
+}
+
+.horizontalButtons{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-self: flex-start;
+  padding: 0 10px;
+}
+
+#watchMovie {
+  flex-basis: 65%;
+}
+
+#trailer {
+  flex-basis: 30%;
+}
+
+#movieData {
+  padding: 0 12px 10px 12px;
+}
+
+.bottomIconBar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bottomBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+ion-icon {
   color: white;
 }
